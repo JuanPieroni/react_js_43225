@@ -1,17 +1,24 @@
- 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  background-color: bisque;
 }
  
- 
- 
+.btn {
+  background-color: aqua;
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 5px;
+  font-style: italic;
+  margin: 5px;
+}
 
- 
 
- 
  
  
