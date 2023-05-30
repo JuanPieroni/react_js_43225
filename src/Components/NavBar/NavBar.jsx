@@ -19,12 +19,12 @@ const NavBar = () => {
                 <a href="#">Capilares</a>
               </li>
               <li>
-                <a href="#">Faciales</a>
+                <a href="#">Faci</a>
               </li>
               <li>
                 <a href="#">Corporales</a>
               </li>
-              <CartWidget />
+      <CartWidget />
             </ul>
           </div>
         </div>
