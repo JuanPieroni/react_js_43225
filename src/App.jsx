@@ -1,8 +1,8 @@
 
  
 import "./App.css";
-import ItemListContainer from "./Components/ItemListContainer";
-import NavBar from "./Components/NavBar";
+import ItemListContainer from "./Components/ItemListContainer/ItemListContainer";
+import NavBar from "./Components/NavBar/NavBar";
  
 
 
@@ -11,7 +11,7 @@ const App = () => {
   return ( 
     <>
       <NavBar  />
-      <ItemListContainer greetings="Bienvenidos a mi tienda"/>
+      <ItemListContainer saludo="Bienvenidos a mi tienda"/>
     </>
   );
 };
