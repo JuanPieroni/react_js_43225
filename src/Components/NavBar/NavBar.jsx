@@ -19,7 +19,7 @@ const NavBar = () => {
                 <a href="#">Capilares</a>
               </li>
               <li>
-                <a href="#">Faci</a>
+                <a href="#">Faciales</a>
               </li>
               <li>
                 <a href="#">Corporales</a>

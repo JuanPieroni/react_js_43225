@@ -1,9 +1,9 @@
 
  
 import "./App.css";
-import ItemListContainer from "./Components/ItemListContainer/ItemListContainer";
+import  ItemListContainer  from "./Components/ItemListContainer/ItemListContainer";
 import NavBar from "./Components/NavBar/NavBar";
- 
+ import ItemList from "./Components/ItemList/ItemList"; 
 
 
 
@@ -12,6 +12,7 @@ const App = () => {
     <>
       <NavBar  />
       <ItemListContainer saludo="Bienvenidos a mi tienda"/>
+       <ItemList/> 
     </>
   );
 };
