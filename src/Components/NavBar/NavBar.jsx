@@ -19,17 +19,17 @@ const NavBar = () => {
                     </div>
                     <div className=" nav-elements ">
                         <ul>
-                            <li>
+                          {/*   <li>
                                 <Link to="/productos">Todos Los Productos</Link>
+                            </li> */}
+                            <li>
+                                <Link to="/productos/capilares">Capilares</Link>
                             </li>
                             <li>
-                                <Link to="/category/capilares">Capilares</Link>
+                                <Link to="/productos/faciales">Faciales</Link>
                             </li>
                             <li>
-                                <Link to="/category/faciales">Faciales</Link>
-                            </li>
-                            <li>
-                                <Link to="/category/corporales">
+                                <Link to="/productos/corporales">
                                     Corporales
                                 </Link>
                             </li>

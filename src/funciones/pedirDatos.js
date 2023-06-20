@@ -4,7 +4,7 @@ export const pedirDatos = () => {
     return new Promise((resolve) => {
         setTimeout(() => {
             resolve(MOCK);
+ 
         }, 800);
     });
 }; 
- 

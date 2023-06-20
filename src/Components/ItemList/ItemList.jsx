@@ -1,22 +1,23 @@
+ 
 import { Item } from "../Item/Item";
 import "./ItemList.scss";
-
+ 
 const ItemList = ({ items }) => {
-
-
-    
+ 
+    console.log(items);
+   
     return (
         <>
             <h2 className="text-center text-yaru">Productos</h2>
             <div
-                style={{ backgroundColor: "lightyellow" }}
+                
                 className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 p-10  gap-4 m-2   "
             >
-                {items.length === 0 ? (
-                    <p>Cargando Productos...</p>
-                ) : (
+                 {   
+                
+                
                     items.map((prod) => <Item key={prod.id} {...prod} />)
-                )}
+                }
             </div>
         </>
     );
