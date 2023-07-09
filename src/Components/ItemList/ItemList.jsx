@@ -1,29 +1,20 @@
- 
-import { Item } from "../Item/Item";
-import "./ItemList.scss";
- 
+import { Item } from "../Item/Item"
+import "./ItemList.scss"
+
 const ItemList = ({ items }) => {
- 
-    console.log(items);
-   
     return (
         <>
             <h2 className="text-center text-yaru">Productos</h2>
-            <div
-                
-                className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 p-10  gap-4 m-2   "
-            >
-                 {   
-                
-                
-                    items.map((prod) => <Item key={prod.id} {...prod} />)
-                }
+            <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 p-10  gap-4 m-2   ">
+                {items.map((prod) => (
+                    <Item key={prod.id} {...prod} />
+                ))}
             </div>
         </>
-    );
-};
+    )
+}
 
-export default ItemList;
+export default ItemList
 
 //1ra opcion pasar el objeto entero
 // items.map((prod) => <Item prod={prod} key={prod.id}/>

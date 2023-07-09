@@ -1,36 +1,44 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from "react"
 
-import { pedirDatos } from "../../funciones/pedirDatos";
+import { useParams } from "react-router-dom"
 
-import { useParams } from "react-router-dom";
-
-import { ItemDetail } from "../ItemDetail/ItemDetail";
+import { ItemDetail } from "../ItemDetail/ItemDetail"
+import { doc, getDoc } from "firebase/firestore"
+import { db } from "../../firebase/config"
 
 export const ItemDetailContainer = () => {
-    const [item, setItem] = useState(null);
-    const [cargando, setCargando] = useState(true);
+    const [item, setItem] = useState(null)
+     
+    const [cargando, setCargando] = useState(true)
 
-    const { itemId } = useParams();
-    
-    
+    const { itemId } = useParams()
 
     useEffect(() => {
-        setCargando(true);
- 
-        pedirDatos()
-            .then((res) => {
-                setItem(res.find((prod) => prod.id === Number(itemId)));
-            })
-            .catch((err) => console.log(err))
-            .finally(() => setCargando(false));
-    }, [itemId]);
+        setCargando(true)
+
+        //1.- REFERENCIA
+
+        const itemRef = doc(db, "productos", itemId)
+
+        //2  SOlicitar esa referencia
+
+        getDoc(itemRef)
+        .then((doc) => {
+
+            const itemDetail = { ...doc.data(), id: doc.id }
+   
+            setItem(itemDetail)
+        })
+        .catch((err) => console.log(err))
+            .finally(() => setCargando(false))
+    }, [itemId])
     return (
         <>
-            {cargando ? (
+              {cargando ? (
                 <p className="text-center">Cargando producto...</p>
             ) : (
                 <ItemDetail {...item} />
             )}
         </>
-    );
-};
+    )
+}

@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
-import "./Item.scss";
-   
+import { Link } from "react-router-dom"
+import "./Item.scss"
+
 /* export const Item = ({ prod }) => { */
 export const Item = ({ id, nombre, stock, desc, precio, img }) => {
     return (
@@ -16,16 +16,15 @@ export const Item = ({ id, nombre, stock, desc, precio, img }) => {
                         />
                         <div className="m-4  ">
                             <span className="   ">Precio: ${precio}</span>
-                            <span className=" block    ">
-                                Stock : {stock}
-                            </span>
+                            <span className=" block    ">Stock : {stock}</span>
                         </div>
 
-                        <Link className="btn-primario" to={`/detail/${id}`}>Detalles</Link>
-                        
+                        <Link className="btn-primario" to={`/detail/${id}`}>
+                            Detalles
+                        </Link>
                     </div>
                 </div>
             }
         </>
-    );
-};
+    )
+}

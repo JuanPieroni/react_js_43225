@@ -1,24 +1,23 @@
-import { useState } from "react";
+import { useState } from "react"
 
-export const useCounter = (init = 0, step1 = 1 ) => {
-    const [counter, setCounter] = useState(0);
-
+export const useCounter = () => {
+    const [counter, setCounter] = useState(1)
+ 
     const masUno = () => {
-        setCounter(counter + step1);
-    };
+        setCounter(counter + 1)
+    }
     const menosUno = () => {
-        setCounter(counter - step1);
-    };
+        setCounter(counter - 1)
+    }
 
     const reset = () => {
-        setCounter(init);
-    };
+        setCounter(1)
+    }
 
     return {
         counter,
         masUno,
         menosUno,
-    reset,
-       
-    };
-};
+        reset,
+    }
+}
